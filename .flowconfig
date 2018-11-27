@@ -1,0 +1,12 @@
+[ignore]
+.*/node_modules/.*
+
+[include]
+
+[libs]
+
+[options]
+module.system.node.resolve_dirname=ui
+module.system.node.resolve_dirname=locales
+module.system.node.resolve_dirname=3rd_parties
+esproposal.decorators=ignore

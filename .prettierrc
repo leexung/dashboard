@@ -1,0 +1,21 @@
+{
+  "arrowParens": "avoid",
+  "bracketSpacing": true,
+  "endOfLine": "auto",
+  "eslintIntegration": true,
+  "htmlWhitespaceSensitivity": "css",
+  "ignorePath": ".prettierignore",
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": true,
+  "parser": "babylon",
+  "printWidth": 120,
+  "proseWrap": "preserve",
+  "requireConfig": false,
+  "semi": true,
+  "singleQuote": true,
+  "stylelintIntegration": false,
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "tslintIntegration": false,
+  "useTabs": false
+}
