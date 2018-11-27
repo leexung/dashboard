@@ -1,11 +1,24 @@
 {
+  "env": {
+    "test": {
+      "sourceMaps": "inline",
+      "retainLines": true,
+      "plugins": [
+        ["istanbul",
+          {
+            "exclude": [ "**/*.spec.js", "**/*.spec.jsx", "**/_test_/**.*" ],
+            "useInlineSourceMaps": false
+        }]
+      ]
+    }
+  },
   "presets": [
     "@babel/env",
-    "@babel/react"
-  
+    "@babel/react",
+    "@babel/preset-flow"
   ],
   "plugins": [
     "@babel/plugin-proposal-class-properties",
-    "transform-flow-strip-types"
+    "@babel/plugin-transform-flow-strip-types"
   ]
 }
