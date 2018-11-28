@@ -62,15 +62,16 @@ describe('>>>H O M E --- REACT-REDUX (actual Store + reducers) more of Integrati
     );
   });
 
-  it('+++ check Prop matches when  casll dispatch', () => {
+  it.only('+++ check Prop matches when  casll dispatch', () => {
     const EXPECT = 500;
     store.dispatch(onChange(EXPECT));
-    expect(wrapper.find(Input).prop('value')).toBe(1);
+    expect(wrapper.find('input').prop('value')).toBe(500);
+    // TODO:
   });
 
   it('+++ check Prop when change input', () => {
     const input = wrapper.find(Input);
-    input.simulate('change', { value: 500 });
-    expect(wrapper.find(Input).prop('value')).toBe(undefined);
+    input.simulate('change', { target: { value: 500 } });
+    expect(wrapper.find(Input).prop('value')).toBe(500);
   });
 });
