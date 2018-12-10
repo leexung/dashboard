@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { onChange } from '../actions/index';
-
+// commit 1
 const mapStateToProps = state => {
   return { value: state.value  };
 };
