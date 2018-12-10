@@ -13,7 +13,7 @@ const mapDispatchToProps = dispatch => {
 };
 
 type inputProps = {};
-// edit something
+
 export class Input extends Component<inputProps> {
   constructor(props) {
     super(props);
