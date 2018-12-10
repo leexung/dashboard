@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import Input from './Input';
 type typeProps = {};
-// commit 1
+// commit = 3
 export default class App extends Component<typeProps> {
   render() {
     return (
