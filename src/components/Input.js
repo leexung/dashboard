@@ -8,7 +8,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onChange: article => dispatch(onChange(article))
+    onChange: value => dispatch(onChange(value))
   };
 };
 
@@ -23,8 +23,8 @@ export class Input extends Component<inputProps> {
     this.props.onChange(value);
   };
   render() {
-    const value = this.props.value || 1;
-    return <input onChange={this.onChange} value={value} type={this.props.type} />;
+    const value = this.props.value;
+    return <input onChange={this.onChange} value={this.props.value} type={this.props.type} />;
   }
 }
 export default connect(
