@@ -1,4 +1,4 @@
-{
+{ 
   "setupTestFrameworkScriptFile": "<rootDir>/before_test.js",
   "browser": true,
   "collectCoverage": true,
