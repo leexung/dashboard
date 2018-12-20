@@ -1,13 +1,6 @@
-const initialState = {
-  value: 1
-};
-const rootReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case 'CHANGE_VALUE':
-      return {value: action.value};
-    default:
-      return state;
-  }
-};
+import numberOfPullRequest from './numberOfPullRequest';
+import { combineReducers } from 'redux';
+import inputReducer from './inputReducer';
 
+const rootReducer = combineReducers({ numberOfPullRequest, inputReducer });
 export default rootReducer;

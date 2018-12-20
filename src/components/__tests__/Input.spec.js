@@ -62,7 +62,7 @@ describe('>>>H O M E --- REACT-REDUX (actual Store + reducers) more of Integrati
     );
   });
 
-  it.only('+++ check Prop matches when  casll dispatch', () => {
+  it('+++ check Prop matches when  casll dispatch', () => {
     const EXPECT = 500;
     store.dispatch(onChange(EXPECT));
     expect(wrapper.find('input').prop('value')).toBe(500);

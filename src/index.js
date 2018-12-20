@@ -7,6 +7,7 @@ import store from './store/index';
 // edit sth on window
 const root = document.getElementById('root');
 
+
 if (root !== null) {
   ReactDOM.render(
     <Provider store={store}>
