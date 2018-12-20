@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { onChange } from '../actions/index';
+import { onChange } from 'actions/index';
 
 const mapStateToProps = state => {
-  return { value: state.inputReducer.value  };
+  return { value: state.inputReducer.value };
 };
 
 const mapDispatchToProps = dispatch => {
@@ -23,7 +23,6 @@ export class Input extends Component<inputProps> {
     this.props.onChange(value);
   };
   render() {
-    const value = this.props.value;
     return <input onChange={this.onChange} value={this.props.value} type={this.props.type} />;
   }
 }

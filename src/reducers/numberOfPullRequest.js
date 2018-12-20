@@ -1,4 +1,4 @@
-import { SELECT_CHANNEL, REQUEST_POSTS, RECEIVE_POSTS } from '../actions/numberOfPullRequest';
+import { SELECT_CHANNEL, REQUEST_POSTS, RECEIVE_POSTS } from 'actions/numberOfPullRequest';
 
 export default function numberOfPullRequest(state = {}, action) {
   switch (action.type) {
