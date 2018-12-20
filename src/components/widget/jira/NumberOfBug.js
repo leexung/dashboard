@@ -4,19 +4,20 @@ import basicAuthHeader from 'helpers/basicAuthen';
 
 // import axios from 'axios';
 // this simple component for react using react hook
-function NumberOfPR() {
+function NumberOfBug() {
   const [data, setData] = useState({ hits: [] });
 
   useEffect(() => {
     const a = async() => {
       const authKey = {
-        username: 'leexung',
+        username: 'mr.xxx@xxx.xxx',
         password: 'bZZGpNeWMVzdgxyqr9TB'
       };
       const opts = authKey ? { headers: basicAuthHeader(authKey) } : {};
-      // const result = await fetch('http://hn.algolia.com/api/v1/search?query=redux')
-      // const response = await fetch('https://api.bitbucket.org/2.0/repositories/mataria/yulsaria/pullrequests', opts);
-      const response = await fetch('https://api.bitbucket.org/2.0/repositories/leexung/yulsaria/pullrequests', opts);
+      const response = await fetch(
+        'https://yulsaria.atlassian.net/rest/api/2/search?jql=project%20%3D%20YUL%20AND%20issuetype%20%3D%20Bug%20ORDER%20BY%20Rank%20ASC',
+        opts
+      );
       const json = await response.json();
       setData(json);
     };
@@ -25,15 +26,15 @@ function NumberOfPR() {
 
   return (
     <ul>
-      {data.values &&
-        data.values.map(item => (
-          <li key={item.author.display_name}>
-            <a>Author {item.author.display_name} </a>
-            <a>Description: {item.description}</a>
+      {data.issues &&
+        data.issues.map(item => (
+          <li key={item.id}>
+            <a>name {item.fields.summary} </a>
+            <a>updated: {item.fields.updated}</a>
           </li>
         ))}
     </ul>
   );
 }
 
-export default NumberOfPR;
+export default NumberOfBug;
