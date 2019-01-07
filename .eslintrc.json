@@ -1,6 +1,7 @@
 {
   "plugins": [
-    "react"
+    "react",
+    "react-hooks"
   ],
   "globals": {
     "jest": true,
@@ -92,7 +93,8 @@
     "react/prop-types": 0,
     "react/no-deprecated": 0,
     "react/display-name": 0,
-    "jsx-quotes": [1, "prefer-single"]
+    "jsx-quotes": [1, "prefer-single"],
+    "react-hooks/rules-of-hooks": "error"
   },
   "settings": {
     "react": {
